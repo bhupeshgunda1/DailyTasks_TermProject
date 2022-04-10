@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>ToDo List</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="/assets/todo-list.js"></script>
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div id="todo-table">
+            <form>
+                <p style="color: rgb(12, 13, 13); font-size:45px; text-align: center;">Daily Tasks </p>
+                <input type="text" name="item" placeholder="Add new item..." required />
+                <button type="submit">Add item</button>
+            </form>
+            
+            <ul>
+                <% for ( var i=0 ; i < todos.length ; i++ ){ %>
+                    <li><%=todos[i].item%></li>
+                <%}%>
+            </ul>
+        </div>
+    </body>
+    <footer style="color: rgb(165, 221, 221); font-size:35px; text-align: center;"> Group Term Project</footer>
+
+</html>
